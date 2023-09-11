@@ -1,0 +1,63 @@
+User (Usuario):
+Esta tabla es proporcionada por el sistema de autenticación de Django y se utiliza para representar a los empleados o usuarios registrados en la aplicación. Algunos de los campos incluidos en el modelo User de Django son:
+username: Nombre de usuario único.
+password: Contraseña encriptada.
+first_name y last_name: Nombre y apellido del usuario.
+email: Correo electrónico del usuario.
+Y otros campos relacionados con la autenticación y la gestión de usuarios.
+
+Activo:
+Esta tabla almacena información sobre los activos físicos en la fábrica, como máquinas, equipos o instalaciones.
+Campos importantes:
+nombre: Nombre o descripción del activo.
+descripcion: Información adicional sobre el activo.
+fecha_adquisicion: La fecha en que se adquirió el activo.
+estado: El estado actual del activo (por ejemplo, en funcionamiento, en mantenimiento, desechado).
+ubicacion: La ubicación física del activo en la fábrica.
+
+Proveedor:
+Esta tabla almacena datos sobre los proveedores de repuestos y servicios de mantenimiento.
+Campos importantes:
+nombre_empresa: El nombre de la empresa proveedora.
+contacto: Información de contacto del proveedor.
+telefono: Número de teléfono del proveedor.
+correo_electronico: La dirección de correo electrónico del proveedor.
+
+OrdenTrabajo:
+Esta tabla registra las órdenes de trabajo generadas para realizar mantenimiento en los activos.
+Campos importantes:
+activo: Una referencia al activo en el que se realizará el trabajo.
+descripcion_orden: Descripción detallada del trabajo a realizar.
+fecha_creacion: La fecha en que se creó la orden de trabajo.
+prioridad: La prioridad asignada a la orden de trabajo.
+estado_orden: El estado actual de la orden (pendiente, en proceso, completada).
+fecha_inicio y fecha_finalizacion: Fechas planificadas para el inicio y la finalización del trabajo.
+
+MantenimientoPreventivo:
+Esta tabla se utiliza para programar y realizar el mantenimiento preventivo en los activos.
+Campos importantes:
+activo: Una referencia al activo que requiere mantenimiento preventivo.
+descripcion_mantenimiento: Descripción detallada del trabajo preventivo.
+fecha_programada: La fecha en que se programó el mantenimiento preventivo.
+frecuencia: La frecuencia con la que se realiza el mantenimiento preventivo (por ejemplo, mensual, trimestral, anual).
+
+HistorialMantenimiento:
+Esta tabla registra un historial de todos los mantenimientos realizados en los activos, ya sean mantenimientos preventivos o mantenimientos generales.
+Campos importantes:
+orden_trabajo: Una referencia a la orden de trabajo relacionada (si es una orden de mantenimiento).
+mantenimiento_preventivo: Una referencia al mantenimiento preventivo relacionado (si es un mantenimiento preventivo).
+fecha_mantenimiento: La fecha en que se realizó el mantenimiento.
+descripcion_mantenimiento_realizado: Detalles sobre las tareas realizadas durante el mantenimiento.
+costo_mantenimiento: El costo asociado con el mantenimiento.
+responsable_mantenimiento: El usuario (empleado) responsable del mantenimiento.
+
+Repuesto:
+Esta tabla almacena información sobre los repuestos disponibles en la fábrica.
+Campos importantes:
+nombre_repuesto: El nombre o descripción del repuesto.
+descripcion_repuesto: Información adicional sobre el repuesto.
+proveedor: Una referencia al proveedor que suministra el repuesto.
+precio: El precio del repuesto.
+cantidad_stock: La cantidad actual en stock del repuesto.
+
+Con esta estructura de base de datos, puedes gestionar de manera efectiva los activos, el mantenimiento, las órdenes de trabajo y los empleados (usuarios) en una fábrica, manteniendo un historial completo de los mantenimientos realizados y la disponibilidad de repuestos.
