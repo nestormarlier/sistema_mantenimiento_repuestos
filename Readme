@@ -1,3 +1,4 @@
+Sistema de gestión de mantenimiento y repuestos.
 User (Usuario):
 Esta tabla es proporcionada por el sistema de autenticación de Django y se utiliza para representar a los empleados o usuarios registrados en la aplicación. Algunos de los campos incluidos en el modelo User de Django son:
 username: Nombre de usuario único.
