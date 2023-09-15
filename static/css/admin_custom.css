@@ -1,0 +1,22 @@
+/* Cambiar el color de fondo del encabezado */
+#header {
+    background-color: #333; /* Fondo oscuro */
+}
+
+/* Cambiar el color del texto del encabezado */
+#header h1, #header h2 {
+    color: #fff; /* Texto blanco */
+}
+
+/* Cambiar el color de fondo de la barra de navegación */
+#nav-global, #nav-global a {
+    background-color: #222; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+/* Cambiar el color del botón de "Guardar" */
+.save-button input[type="submit"] {
+    background-color: #007BFF; /* Color azul */
+    border-color: #007BFF; /* Color del borde azul */
+    color: #fff; /* Texto blanco */
+}

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+import django.utils
 
 class Activo(models.Model):
     ESTADOS_ACTIVO = (
@@ -87,6 +88,9 @@ class Repuesto(models.Model):
     descripcion_repuesto = models.TextField()
     proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE)
     precio = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Precio $ Arg.')
+    garantia = models.BooleanField(default=False)
+    cant_garantia = models.IntegerField(default=0, verbose_name='Cantidad meses de garantía')
+    fecha_gtia = models.DateField(null=True, blank=True, verbose_name='Fecha de inicio de la garantía')
     cantidad_stock = models.PositiveIntegerField()
 
     def __str__(self) -> str:

@@ -62,6 +62,9 @@ nombre_repuesto: El nombre o descripción del repuesto.
 descripcion_repuesto: Información adicional sobre el repuesto.
 proveedor: Una referencia al proveedor que suministra el repuesto.
 precio: El precio del repuesto.
+precio: Garantia del repuesto (SI/NO)
+tiempo_garantia: Cantidad de meses de garantía
+fecha_garantia: Fecha inicio de la garantía
 cantidad_stock: La cantidad actual en stock del repuesto.
 
 Con esta estructura de base de datos, puedes gestionar de manera efectiva los activos, el mantenimiento, las órdenes de trabajo y los empleados (usuarios) en una fábrica, manteniendo un historial completo de los mantenimientos realizados y la disponibilidad de repuestos.
